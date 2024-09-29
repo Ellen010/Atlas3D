@@ -5,7 +5,7 @@ function Home() {
     <div>
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to Atlas3D!
+          Welcome to My3D!
         </h1>
       </main>
     </div>

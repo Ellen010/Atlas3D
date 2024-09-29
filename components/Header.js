@@ -14,53 +14,18 @@ import {
     Modal,
 } from "react-native";
 
-export function Header {
+export function Header ({ style, lightColor, darkColor, children, ...rest }) {
     return (
         <View style={styles.headerContainer}>
-            <TouchableOpacity
-                style={styles.logoContainer}
-                onPress={() => {
-                    console.log("pressed");
-                    router.navigate("/");
-                }}
-            >
-                <Animated.Image
-                    source={require("../public/logo.jpg")}
-                    style={[styles.noPestsAllowedLogo, { transform: [{ rotateY }] }]}
-                />
-            </TouchableOpacity>
             <View style={styles.rightHeader}>
                 <ThemedText style={styles.welcomeText}>Bienvenue {user.firstname}</ThemedText>
                 <TouchableOpacity style={[styles.avatarContainer, { borderColor }]} onPress={handleAvatarPress}>
-                    <Image source={require("../assets/images/avatar1.png")} style={styles.avatar} />
+                    <Image source={require("../public/logo.png")} style={styles.avatar} />
                 </TouchableOpacity>
             </View>
-            <Modal
-                visible={menuVisible}
-                transparent={true}
-                animationType="fade"
-                onRequestClose={() => setMenuVisible(false)}
-            >
-    
-                            <ThemedText style={styles.menuItemText}>Nous contacter </ThemedText>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.menuItem}
-                            onPress={() => {
-                                setMenuVisible(false);
-                                logout();
-                            }}
-                        >
-                            <ThemedText style={styles.menuItemText}>Déconnection</ThemedText>
-                        </TouchableOpacity>
-                    </View>
-                </TouchableOpacity>
-            </Modal>
         </View>
-    );
+    )
 }
-
-
 
 const styles = StyleSheet.create({
     headerContainer: {
