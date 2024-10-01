@@ -5,23 +5,15 @@ import {
     StyleSheet,
     TouchableOpacity,
     View,
-    Text,
-    Image,
-    Alert,
-    Animated,
-    Easing,
-    Platform,
-    Modal,
+    Image
 } from "react-native";
 
 export function Header ({ style, lightColor, darkColor, children, ...rest }) {
     return (
         <View style={styles.headerContainer}>
-            <View style={styles.rightHeader}>
+            <View>
                 <ThemedText style={styles.welcomeText}>Bienvenue {user.firstname}</ThemedText>
-                <TouchableOpacity style={[styles.avatarContainer, { borderColor }]} onPress={handleAvatarPress}>
                     <Image source={require("../public/logo.png")} style={styles.avatar} />
-                </TouchableOpacity>
             </View>
         </View>
     )
@@ -29,11 +21,24 @@ export function Header ({ style, lightColor, darkColor, children, ...rest }) {
 
 const styles = StyleSheet.create({
     headerContainer: {
+        display: "flex",
+        flexWrap: "wrap",
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
         padding: 16,
         backgroundColor: "#9f4634",
         height: 100,
-    }
+        text-align: "center",
+        text-transform: "uppercase",
+        padding: 32px,
+        backgroundColor: "#0a0a23",
+        color: "#fff",
+        borderBottom: "4px solid #fdb347",
+        objectFit: "cover",
+      },
+    avatar: {
+        height:150px,
+        width:150 px,
+      }
 });
