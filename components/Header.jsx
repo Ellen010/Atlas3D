@@ -3,7 +3,6 @@ import { router } from "expo-router";
 import { useSelector } from "react-redux";
 import {
     StyleSheet,
-    TouchableOpacity,
     View,
     Image
 } from "react-native";
@@ -29,16 +28,16 @@ const styles = StyleSheet.create({
         padding: 16,
         backgroundColor: "#9f4634",
         height: 100,
-        text-align: "center",
-        text-transform: "uppercase",
-        padding: 32px,
+        textAlign: "center",
+        textTransform: "uppercase",
+        padding: 32,
         backgroundColor: "#0a0a23",
         color: "#fff",
         borderBottom: "4px solid #fdb347",
         objectFit: "cover",
       },
     avatar: {
-        height:150px,
-        width:150 px,
+        height: 150,
+        width: 150,
       }
 });

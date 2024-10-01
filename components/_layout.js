@@ -2,6 +2,7 @@ import { Tabs } from "expo-router";
 import React from "react";
 import { TabBarIcon } from "../../components/navigation/TabBarIcon";
 import { Header } from "../../components/Header";
+import { Home } from "../../components/Home";
 import { Colors } from "../../constants/Colors";
 import { KeyboardAvoidingView, useColorScheme } from "react-native";
 import { useSelector } from "react-redux";
