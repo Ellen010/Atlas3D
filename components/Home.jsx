@@ -1,10 +1,11 @@
 import styles from '../styles/Home.module.css';
+import { useEffect, useState } from 'react';
 import { Header } from "./Header";
 
 function Home() {
   return (
     <>
-      <Header />
+      <Header/>
       <div>
         <main className={styles.main}>
           <h1 className={styles.title}>

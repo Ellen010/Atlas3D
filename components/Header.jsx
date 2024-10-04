@@ -7,37 +7,37 @@ import {
     Image
 } from "react-native";
 
-export function Header ({ style, lightColor, darkColor, children, ...rest }) {
-    return (
-        <View style={styles.headerContainer}>
-            <View>
-                <ThemedText style={styles.welcomeText}>Bienvenue {user.firstname}</ThemedText>
-                    <Image source={require("../public/logo.png")} style={styles.avatar} />
-            </View>
-        </View>
-    )
-}
-
-const styles = StyleSheet.create({
-    headerContainer: {
-        display: "flex",
-        flexWrap: "wrap",
-        flexDirection: "row",
-        alignItems: "center",
+        const Header = ({ date }) => {
+            return (
+                <header className={styles.header}>
+                    <div className={styles.logoContainer}>
+                        <Image source={require("../public/logo.png")} style={styles.avatar} />
+                        <Moment className={styles.date} date={date} format="MMM Do YYYY" />
+                        <h1 className={styles.title}>3Degrees</h1>
+                    </div>
+                </header>
+            );
+        };
+        const styles = {
+            header: {
+                display: "flex",
+                flexWrap: "wrap",
+                alignItems: "center",
         justifyContent: "space-between",
-        padding: 16,
-        backgroundColor: "#9f4634",
-        height: 100,
-        textAlign: "center",
-        textTransform: "uppercase",
-        padding: 32,
-        backgroundColor: "#0a0a23",
-        color: "#fff",
-        borderBottom: "4px solid #fdb347",
-        objectFit: "cover",
-      },
-    avatar: {
-        height: 150,
-        width: 150,
-      }
-});
+        backgroundColor: "105ba6",
+            },
+            logoContainer: {
+                display: "flex",
+            },
+            avatar: {
+                width: 150, 
+                height: 150, 
+            },
+            date: {
+                color:black
+            },
+            title: {
+                // Add title styles
+            },
+        };
+        export default Header;
